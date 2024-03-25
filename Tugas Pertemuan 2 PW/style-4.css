@@ -1,0 +1,40 @@
+.atas {
+    background-color: gray;
+    margin-bottom: 10px;
+}
+
+.foto {
+    padding: 10px;
+    position: absolute; top: 30px;
+    left: 30px;
+}
+
+.gambar {
+    border-radius: 50%;
+}
+
+.info {
+    color: white;
+    padding: 10px;
+}
+
+.data {
+    position: absolute; 
+    top: 400px;
+}
+
+.education {
+    position: absolute;
+    left: 200px;
+}
+
+
+.experience {
+    position: absolute;
+    left: 620px;
+}
+
+.skills{
+    position: absolute;
+    left: 1100px;
+}

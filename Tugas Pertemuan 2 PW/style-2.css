@@ -1,0 +1,28 @@
+.gmbr {
+    border: solid; width: 230px; height: 388px;
+}
+
+.font {
+    font-size: 15px;
+}
+
+.judul {
+    color: green;
+}
+
+.namaHewan {
+    color: blue;
+}
+
+.gmbr2 {
+    border: solid; width: 230px; height: 388px;
+    position: absolute; left: 250px; 
+    position: absolute; top: 60px;
+    
+}
+
+.gmbr3 {
+    border: solid; width: 230px; height: 388px;
+    position: absolute; right: 250px; 
+    position: absolute; top: 60px;
+}
