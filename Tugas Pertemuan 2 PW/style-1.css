@@ -1,0 +1,33 @@
+.NamaAtas {
+    color: aquamarine;
+}
+
+.Tgl{
+    font-size: 10px;
+}
+
+/* atas */
+
+/* tengah 1 */
+.gambarAtom1 {
+    margin-top: 20px;
+}
+
+.p1 {
+    margin-top: 50px;
+}
+/* tengah 1 */
+
+/* akhir */
+
+.p1::first-letter {
+    color: red;
+}
+
+.p2::first-letter {
+    color: green;
+}
+
+.p3::first-letter {
+    color: yellow;
+}
