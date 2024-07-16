@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan-3</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .numeric {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Perhitungan Faktorial dan Deret</h1>
+
+    <form id="factorialForm">
+      <label for="nInput">Masukkan nilai N:</label>
+      <input type="number" id="nInput" min="1" required />
+      <button type="button" onclick="calculate()">Submit</button>
+      <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+
+    <div id="resultTable"></div>
+
+    <script>
+      function calculate() {
+        const n = parseInt(document.getElementById("nInput").value);
+        if (isNaN(n) || n < 1) {
+          alert("Masukkan nilai N yang valid (bilangan bulat positif)");
+          return;
+        }
+
+        let factorial = 1;
+        let sum = 0;
+
+        for (let i = 1; i <= n; i++) {
+          factorial *= i;
+          sum += 1 / i;
+        }
+
+        const result =
+          "<div><h2>Hasil</h2>" +
+          "<p><strong>Faktorial:</strong> " +
+          factorial.toFixed(2) +
+          "</p>" +
+          "<p><strong>Deret:</strong> " +
+          sum.toFixed(4) +
+          "</p></div>";
+
+        document.getElementById("resultTable").innerHTML = result;
+      }
+
+      function resetForm() {
+        document.getElementById("nInput").value = "";
+        document.getElementById("resultTable").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

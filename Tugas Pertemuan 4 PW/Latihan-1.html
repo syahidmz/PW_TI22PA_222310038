@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h3, h4 {
+            text-align: center;
+        }
+        hr {
+            width: 600px;
+            color: black;
+            border: none;
+            border-top: 2px solid black;
+        }
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>SELAMAT DATANG</h3>
+    <form name="f"> 
+        <h4>Sekarang Menunjukkan Jam</h4> 
+        <input type="text" size="16" name="txtwaktu" readonly> 
+        <hr> 
+    </form>
+
+    <script>
+        function timer() { 
+            var d = new Date(); 
+            var jam = d.getHours(); 
+            var menit = d.getMinutes(); 
+            var detik = d.getSeconds(); 
+            var strwaktu = (jam<10)?"0"+jam:jam; 
+            strwaktu += (menit<10)?":0"+menit:":"+menit; 
+            strwaktu += (detik<10)?":0"+detik:":"+detik; 
+            document.f.txtwaktu.value = strwaktu; 
+            setTimeout(timer, 200);
+        }
+
+        function getGreeting() {
+            const now = new Date();
+            const hour = now.getHours();
+            if (hour < 12) {
+                return "Selamat Pagi!";
+            } else if (hour < 18) {
+                return "Selamat Siang!";
+            } else {
+                return "Selamat Malam!";
+            }
+        }
+
+        window.onload = function() {
+            const greeting = getGreeting();
+            alert(greeting);
+            timer();
+        };
+    </script>
+</body>
+</html>

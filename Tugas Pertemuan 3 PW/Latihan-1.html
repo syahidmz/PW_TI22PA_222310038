@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan-1</title>
+  </head>
+  <body>
+    <h1>Data Diri</h1>
+    <form action="" method="POST" name="forms">
+      <div>
+        <label for="nim">NIM:</label>
+        <input type="text" name="nim" id="nim" required />
+      </div>
+      <br />
+      <div>
+        <label for="nama">Nama:</label>
+        <input type="text" name="nama" id="nama" required />
+      </div>
+      <br />
+      <div>
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <select name="jenis_kelamin" id="jenis_kelamin" required>
+          <option value="">Pilih Jenis Kelamin</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="agama">Agama:</label>
+        <input type="text" name="agama" id="agama" required />
+      </div>
+      <br />
+      <div>
+        <label for="status">Status:</label>
+        <select name="status" id="status" required>
+          <option value="">Pilih Status</option>
+          <option value="Mahasiswa">Mahasiswa</option>
+          <option value="Dosen">Dosen</option>
+          <option value="Karyawan">Karyawan</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="jurusan">Jurusan:</label>
+        <input type="text" name="jurusan" id="jurusan" required />
+      </div>
+      <br />
+      <div>
+        <label for="komentar">Komentar:</label>
+        <textarea name="komentar" id="komentar" rows="5" cols="30"></textarea>
+      </div>
+      <br />
+      <div>
+        <button type="button" onclick="validasi()">Kirim</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <div id="output"></div>
+    <script>
+      function validasi() {
+        var nim = document.getElementById("nim").value;
+        var nama = document.getElementById("nama").value;
+        var jenisKelamin = document.getElementById("jenis_kelamin").value;
+        var agama = document.getElementById("agama").value;
+        var status = document.getElementById("status").value;
+        var jurusan = document.getElementById("jurusan").value;
+        var komentar = document.getElementById("komentar").value;
+
+        if (
+          nim == "" ||
+          nama == "" ||
+          jenisKelamin == "" ||
+          agama == "" ||
+          status == "" ||
+          jurusan == "" ||
+          komentar == ""
+        ) {
+          alert("Semua input harus diisi!");
+        } else {
+          var output = "NIM: " + nim + "<br>";
+          output += "Nama: " + nama + "<br>";
+          output += "Jenis Kelamin: " + jenisKelamin + "<br>";
+          output += "Agama: " + agama + "<br>";
+          output += "Status: " + status + "<br>";
+          output += "Jurusan: " + jurusan + "<br>";
+          output += "Komentar: " + komentar;
+
+          document.getElementById("output").innerHTML = output;
+        }
+      }
+    </script>
+  </body>
+</html>
